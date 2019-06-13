@@ -1,0 +1,2103 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #fff
+	input, textarea
+		outline: none
+
+b, strong
+	font-weight: normal
+
+.img-r
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a:hover
+	text-decoration: none
+	color: initial
+
+a:focus
+	outline: none
+
+button
+	border: none
+	background-color: transparent
+	outline: none
+	&:focus
+		outline: none
+
+.content
+	overflow-x: hidden
+
+.grid
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	margin-left: auto
+	margin-right: auto
+	width: 100%
+	max-width: 1360px
+	height: 100vh
+	.line
+		position: absolute
+		top: 0
+		width: 1px
+		height: 100%
+		background-color: rgba(#C4C4C4 ,.25)
+		&_1
+			left: 0
+		&_2
+			left: 16.66667%
+		&_3
+			left: 33.33333%
+		&_4
+			left: 50%
+		&_5
+			left: 66.66667%
+		&_6
+			left: 83.33333%
+		&_7
+			left: 100%
+
+.nav
+	&-top
+		background-color: #fff
+		padding-top: 15px
+		width: 100%
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10
+		&__phone
+			display: table
+			float: left
+			font-family: $text-s
+			color: $accent
+			padding: 8px 30px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+		&__lang
+			display: table
+			float: right
+			font-size: 14px
+			line-height: 36px
+			text-align: center
+			width: 40px
+			height: 36px
+			border: 2px solid #B9B9B9
+			border-radius: 20px
+			color: $accent
+			transition: all ease .3s
+			&:hover
+				color: $accent
+				background-color: #B9B9B9
+				transition: all ease .3s
+		&__line
+			background-color: #EBEBEB
+			padding: 15px 0
+			margin-top: 15px
+	&-list
+		display: table
+		margin: 0 auto
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		&__item
+			display: inline-block
+			font-family: $text-m
+			font-size: 16px
+			margin-right: 40px
+			a
+				color: #000
+			&:last-child
+				margin-right: 0
+
+.head
+	position: relative
+	margin-bottom: 50px
+	padding-top: 120px
+	&-slider
+		&__slide
+			position: relative
+			outline: none
+			&_slide1
+				&:before
+					content: ''
+					width: 383px
+					height: 437px
+					background-image: url(../img/head_pattern.svg)
+					position: absolute
+					left: 0
+					top: 0
+				&:after
+					content: ''
+					width: 60%
+					height: 100%
+					background-color: #EBEBEB
+					position: absolute
+					top: 0
+					left: 0
+					z-index: -1
+			&_slide2
+				padding-bottom: 50px
+				&:before
+					content: ''
+					width: 60%
+					height: 100%
+					background: linear-gradient(90deg, #7EB7DB 0%, #3FB4C7 100%)
+					position: absolute
+					top: 0
+					right: 0
+					z-index: -1
+		&__nav
+			margin-top: -70px
+			.slick-arrow
+				cursor: pointer
+				position: relative
+				font-family: $text-s
+				font-size: 36px
+				letter-spacing: 0.03em
+				color: #8F8F8F
+				padding-bottom: 15px
+				transition: all ease .3s
+				z-index: 2
+				&:before
+					content: ''
+					width: 102px
+					height: 24px
+					position: absolute
+					bottom: 0
+					z-index: -1
+					transition: all ease .3s
+				&.slick-prev
+					float: left
+					&:before
+						background-image: url(../img/arrow_back.svg)
+						left: 50%
+						margin-left: -51px
+				&.slick-next
+					float: right
+					&:before
+						background-image: url(../img/arrow_next.svg)
+						right: 50%
+						margin-right: -51px
+				&:hover
+					transition: all ease .3s
+					color: $accent
+					&:before
+						transition: all ease .3s
+						bottom: 30px
+	&__note
+		position: absolute
+		left: -70px
+		bottom: 250px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		max-width: 440px
+		position: relative
+		z-index: 1
+		font-family: $text-m
+		font-size: 34px
+		line-height: 1.2
+		color: #343434
+		padding-top: 100px
+		margin-bottom: 40px
+		span
+			font-family: $text-b
+		&:before
+			content: ''
+			width: 206px
+			height: 201px
+			background-image: url(../img/optika_logo.svg)
+			position: absolute
+			bottom: -100px
+			right: -100px
+			z-index: -1
+	&__txt
+		position: relative
+		z-index: 1
+		font-family: $text-m
+		font-size: 18px
+		color: #343434
+		margin-left: 40px
+		max-width: 420px
+		&:before
+			content: ''
+			width: 250px
+			height: 224px
+			background-image: url(../img/head_txt.svg)
+			position: absolute
+			left: 0
+			bottom: -250px
+	&__img
+		margin-top: 50px
+		&_abs
+			position: absolute
+			bottom: -50px
+			left: 50%
+			margin-left: -262px
+	&__btn
+		position: relative
+		z-index: 1
+		display: table
+		margin-top: 20px
+		font-family: $text-s
+		font-size: 16px
+		letter-spacing: 0.03em
+		color: $accent
+		padding: 8px 70px
+		border: 2px solid $accent
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			background-color: $accent
+			color: #fff
+			transition: all ease .3s
+		&:before
+			content: ''
+			width: 80px
+			height: 3px
+			background-color: #252525
+			position: absolute
+			top: 50%
+			left: -40px
+			margin-top: -1.5px
+	&-block
+		position: relative
+		&:before
+			content: ''
+			width: 120%
+			height: 140%
+			background-color: #FEFEFE
+			position: absolute
+			top: -20%
+			left: -10%
+			z-index: -1
+		&__ttl
+			position: relative
+			font-family: $text-m
+			font-size: 30px
+			padding-bottom: 20px
+			margin-bottom: 20px
+			span
+				font-family: $text-b
+			&:before
+				content: ''
+				width: 100%
+				height: 1px
+				background-color: #000
+				position: absolute
+				bottom: 0
+				left: 0
+		&__wrap
+			max-width: 350px
+			margin: 0 auto
+		&__subttl
+			font-family: $text-m
+			font-size: 20px
+			margin-bottom: 20px
+		&__left
+			width: 50%
+			float: left
+		&__ico
+			width: 54px
+			height: 54px
+			background: linear-gradient(90deg, rgba(121, 220, 210, 0.5) 0%, rgba(63, 180, 199, 0.5) 100%)
+			border-radius: 50%
+			padding: 10px 0
+			margin: 0 auto
+			&_i2
+				padding: 15px 0
+			img
+				width: 34px
+				margin: 0 auto
+		&__txt
+			font-family: $text-m
+			font-size: 18px
+			text-align: center
+		&__btn
+			position: relative
+			display: table
+			margin: 20px auto 0
+			font-family: $text-s
+			font-size: 16px
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 70px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+			&:before
+				content: ''
+				width: 80px
+				height: 3px
+				background-color: #252525
+				position: absolute
+				top: 50%
+				left: -40px
+				margin-top: -1.5px
+
+.advantages
+	padding: 100px 0
+	.container
+		position: relative
+	.dot
+		animation: pulse 10s linear 10s infinite alternate
+		&_1
+			width: 45px
+			height: 45px
+			border: 7px solid $accent
+			border-radius: 50%
+			position: absolute
+			left: 0
+			bottom: 150px
+		&_2
+			width: 70px
+			height: 70px
+			border: 7px solid $accent
+			border-radius: 50%
+			position: absolute
+			left: 430px
+			bottom: -90px
+		&_3
+			width: 45px
+			height: 45px
+			border: 7px solid $accent
+			border-radius: 50%
+			position: absolute
+			right: 200px
+			bottom: -60px
+		&_4
+			width: 70px
+			height: 70px
+			border: 7px solid $accent
+			border-radius: 50%
+			position: absolute
+			right: 0
+			bottom: 0
+			&:before
+				content: ''
+				width: 42px
+				height: 42px
+				background-color: #B5C3C5
+				position: absolute
+				top: 7px
+				left: 7px
+				border-radius: 50%
+	&__note
+		position: absolute
+		left: -50px
+		top: -40px
+		z-index: 1
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 44px
+		i
+			display: block
+			width: 150px
+			height: 105px
+			background-image: url(../img/advantages_ttl.svg)
+			position: absolute
+			top: -6px
+			left: 300px
+		span
+			position: relative
+			z-index: 1
+		&:before
+			content: ''
+			height: 160%
+			width: 120%
+			background-color: #EBEBEB
+			position: absolute
+			top: -30%
+			right: -10%
+		&:after
+			content: ''
+			height: 250%
+			width: calc(100% + 50vw)
+			background-color: #EBEBEB
+			position: absolute
+			top: -30%
+			right: 0
+			z-index: -1
+	&__img
+		float: right
+		margin-top: -140px
+	&-item
+		max-width: 210px
+		margin-top: 80px
+		&__ico
+			position: relative
+			&:before
+				content: ''
+				width: 70px
+				height: 70px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.44) 0%, #3FB4C7 100%)
+				border-radius: 50%
+				position: absolute
+				top: -30px
+				left: 50%
+				margin-left: -60px
+			&:after
+				content: ''
+				width: 40px
+				height: 40px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.44) 0%, #3FB4C7 100%)
+				border-radius: 50%
+				position: absolute
+				top: -15px
+				left: 50%
+				margin-left: -45px
+			img
+				position: relative
+				z-index: 1
+				display: block
+				margin: 0 auto 20px
+		&__txt
+			font-family: $text-m
+			text-align: center
+
+.catalog
+	.container
+		position: relative
+	.dot
+		animation: pulse 10s linear 10s infinite alternate
+		&_1
+			width: 27px
+			height: 27px
+			border-radius: 50%
+			background-color: $accent
+			position: absolute
+			left: 50%
+			bottom: 400px
+		&_2
+			width: 45px
+			height: 45px
+			border: 7px solid #969697
+			border-radius: 50%
+			position: absolute
+			left: 0
+			bottom: 100px
+		&_3
+			width: 35px
+			height: 35px
+			border: 7px solid #C5C5C5
+			background-color: #000
+			border-radius: 50%
+			position: absolute
+			left: 400px
+			bottom: 0
+	&_solution
+		padding-top: 100px
+		.container
+			position: relative
+		.dot
+			animation: pulse 10s linear 10s infinite alternate
+			&_1
+				width: 42px
+				height: 42px
+				border-radius: 50%
+				background-color: #939393
+				position: absolute
+				right: 350px
+				top: -50px
+			&_2
+				width: 70px
+				height: 70px
+				border: 7px solid $accent
+				border-radius: 50%
+				position: absolute
+				top: -40px
+				right: 250px
+				left: inherit
+				bottom: inherit
+				&:before
+					content: ''
+					width: 42px
+					height: 42px
+					background-color: #B5C3C5
+					position: absolute
+					top: 7px
+					left: 7px
+					border-radius: 50%
+			&_3
+				width: 42px
+				height: 42px
+				border: 3px solid #79DCD2
+				background-color: transparent
+				border-radius: 50%
+				position: absolute
+				left: 20%
+				top: 300px
+			&_4
+				width: 70px
+				height: 70px
+				border: 7px solid $accent
+				border-radius: 50%
+				position: absolute
+				right: 0
+				bottom: 0
+			&_5
+				width: 24px
+				height: 24px
+				background-color: #939393
+				border-radius: 50%
+				position: absolute
+				left: 0
+				bottom: 200px
+	&__note
+		position: absolute
+		left: -83px
+		top: 40px
+		z-index: 1
+		width: 210px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		margin: 0 auto
+		position: relative
+		font-family: $text-m
+		font-size: 46px
+		padding-bottom: 110px
+		i
+			display: block
+			width: 158px
+			height: 158px
+			background-image: url(../img/catalog_ttl.svg)
+			position: absolute
+			bottom: 0
+			left: 150px
+		span
+			position: relative
+			z-index: 1
+		&_solution
+			display: block
+			i
+				width: 180px
+				height: 92px
+				background-image: url(../img/catalog_ttl2.svg)
+				bottom: inherit
+				left: inherit
+				top: 25px
+				right: 20px
+
+.cart
+	&_last
+		margin-top: 170px
+	&__name
+		min-width: 400px
+		float: right
+		position: relative
+		&:before
+			content: ''
+			width: 105%
+			height: 320px
+			background-color: rgba(#D2F5F2, .5)
+			position: absolute
+			top: 90px
+			left: -2.5%
+		span
+			position: relative
+			z-index: 1
+			display: block
+			font-size: 44px
+			color: #D1D1D1
+			b
+				font-family: $text-bl
+				font-size: 150px
+				line-height: 1
+				letter-spacing: 0.03em
+				color: #636363
+				opacity: 0.6
+			&:last-child
+				float: right
+		&_solution
+			&:before
+				background-color: rgba(#E7E7E7, .9)
+	&-block
+		position: relative
+		top: -80px
+		margin-bottom: -80px
+		&__half
+			position: relative
+			z-index: 1
+			width: 50%
+			float: left
+		&__ttl
+			font-size: 34px
+			color: #0F7A6F
+			margin-bottom: 20px
+		&__txt
+			font-family: $text-m
+			font-size: 20px
+			color: #151515
+			padding-left: 20px
+			margin-bottom: 20px
+		&__img
+			float: right
+			margin-top: 80px
+		&__btn
+			position: relative
+			display: table
+			font-family: $text-s
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 70px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+			&:before
+				content: ''
+				width: 80px
+				height: 3px
+				background-color: #252525
+				position: absolute
+				top: 50%
+				left: -40px
+				margin-top: -1.5px
+
+.delivery
+	position: relative
+	padding: 50px 0
+	margin-top: 50px
+	background: linear-gradient(90deg, #79DCD2 0%, #3FB4C7 100%), #C4C4C4
+	&:before
+		content: ''
+		width: 495px
+		height: 400px
+		background-image: url(../img/delivery_img1.png)
+		position: absolute
+		top: 50%
+		margin-top: -200px
+		right: 0
+	&_second
+		&:before
+			width: 410px
+			height: 365px
+			background-image: url(../img/delivery_img2.png)
+		.delivery-form__btn
+			span i
+				width: 24px
+				height: 24px
+				background-image: url(../img/delivery_ico2.svg)
+				background-size: 24px 24px
+				top: 2px
+	&__note
+		position: absolute
+		left: -28px
+		top: -80px
+		z-index: 1
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 46px
+		padding-bottom: 100px
+		i
+			display: block
+			width: 393px
+			height: 139px
+			background-image: url(../img/delivery_ttl.svg)
+			position: absolute
+			bottom: 0
+			left: 50%
+			margin-left: -196px
+		span
+			position: relative
+			z-index: 1
+	&__subttl
+		display: table
+		position: relative
+		font-family: $text-b
+		font-size: 22px
+		padding-bottom: 10px
+		margin-bottom: 10px
+		&:before
+			content: ''
+			width: 100%
+			height: 1px
+			background-color: #000
+			position: absolute
+			bottom: 0
+			left: 0
+	&__txt
+		font-family: $text-m
+		font-size: 18px
+		margin-bottom: 20px
+		max-width: 640px
+	&-form
+		display: table
+		.rline
+			position: relative
+			display: inline-block
+			&.mr100
+				margin-right: 100px
+		.rfield_error
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 12px
+			color: red
+			visibility: hidden
+		&__input
+			display: block
+			min-width: 210px
+			padding: 4px 0
+			font-family: $text-m
+			font-size: 18px
+			color: #fff
+			border: none
+			border-bottom: 3px solid #fff
+			background-color: transparent
+		&__btn
+			cursor: pointer
+			position: relative
+			display: table
+			margin: 20px auto 0
+			padding: 8px 70px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			span
+				position: relative
+				display: block
+				transition: all ease .3s
+				font-family: $text-s
+				letter-spacing: 0.03em
+				color: $accent
+			i
+				display: block
+				width: 17px
+				height: 24px
+				background-image: url(../img/delivery_ico1.svg)
+				background-size: 17px 24px
+				position: absolute
+				top: 0
+				right: 0
+			&:hover
+				background-color: $accent
+				transition: all ease .3s
+				span
+					transition: all ease .3s
+					color: #fff
+
+.about
+	position: relative
+	padding-top: 100px
+	&:before
+		content: ''
+		width: 394px
+		height: 469px
+		background-image: url(../img/about_pattern.png)
+		position: absolute
+		top: 100px
+		right: 0
+		z-index: -1
+	&__note
+		position: absolute
+		left: -70px
+		top: -50px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 24px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 48px
+		margin-bottom: 50px
+		i
+			display: block
+			width: 180px
+			height: 157px
+			background-image: url(../img/about_ttl.svg)
+			position: absolute
+			top: -80px
+			right: -80px
+		span
+			position: relative
+			z-index: 1
+	&-item
+		position: relative
+		&:last-child
+			&:before
+				content: ''
+				width: calc(50vw + 20px)
+				height: 100px
+				background-color: #F4F4F4
+				z-index: -1
+				position: absolute
+				bottom: -35px
+				right: -20px
+		&__numb
+			position: relative
+			font-family: $text-m
+			font-size: 36px
+			text-align: center
+			span
+				position: relative
+				z-index: 1
+			&:before
+				content: ''
+				width: 70px
+				height: 70px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.44) 0%, #3FB4C7 100%)
+				border-radius: 50%
+				position: absolute
+				top: -30px
+				left: 50%
+				margin-left: -60px
+			&:after
+				content: ''
+				width: 40px
+				height: 40px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.44) 0%, #3FB4C7 100%)
+				border-radius: 50%
+				position: absolute
+				top: -15px
+				left: 50%
+				margin-left: -45px
+		&__txt
+			font-family: $text-m
+			color: #151515
+			text-align: center
+	&__txt
+		font-family: $text-m
+		font-size: 18px
+		margin: 40px 0
+		span
+			font-family: $text-b
+	&__btn
+		position: relative
+		display: table
+		font-family: $text-s
+		font-size: 18px
+		letter-spacing: 0.03em
+		color: $accent
+		padding: 8px 70px
+		border: 2px solid $accent
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			background-color: $accent
+			color: #fff
+			transition: all ease .3s
+		&:before
+			content: ''
+			width: 80px
+			height: 3px
+			background-color: #252525
+			position: absolute
+			top: 50%
+			left: -40px
+			margin-top: -1.5px
+	&-slider
+		position: relative
+		&:before
+			content: ''
+			width: 520px
+			height: 470px
+			background: linear-gradient(90deg, #79DCD2 0%, #3FB4C7 100%)
+			position: absolute
+			top: -75px
+			left: 50%
+			margin-left: -260px
+			z-index: -2
+		&__slide
+			outline: none
+		&__nav
+			overflow: hidden
+			margin-top: 40px
+			.slick-arrow
+				cursor: pointer
+				position: relative
+				font-family: $text-s
+				font-size: 36px
+				letter-spacing: 0.03em
+				color: #8F8F8F
+				padding-bottom: 15px
+				transition: all ease .3s
+				&:before
+					content: ''
+					width: 102px
+					height: 24px
+					position: absolute
+					bottom: 0
+					z-index: -1
+					transition: all ease .3s
+				&.slick-prev
+					float: left
+					&:before
+						background-image: url(../img/arrow_back.svg)
+						left: 50%
+						margin-left: -51px
+				&.slick-next
+					float: right
+					&:before
+						background-image: url(../img/arrow_next.svg)
+						right: 50%
+						margin-right: -51px
+				&:hover
+					transition: all ease .3s
+					color: $accent
+					&:before
+						transition: all ease .3s
+						bottom: 30px
+
+.paydel
+	position: relative
+	padding-top: 100px
+	padding-bottom: 50px
+	&:before
+		content: ''
+		width: 495px
+		height: 402px
+		background-image: url(../img/paydel_pattern.jpg)
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+	&:after
+		content: ''
+		width: 60%
+		height: 70%
+		background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+		position: absolute
+		bottom: 0
+		right: 0
+		z-index: -2
+	.container
+		position: relative
+	.dot
+		animation: pulse 10s linear 10s infinite alternate
+		&_1
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			background-color: #939393
+			position: absolute
+			left: 20%
+			top: -50px
+		&_2
+			width: 35px
+			height: 35px
+			background-color: $accent
+			border-radius: 50%
+			position: absolute
+			top: -70px
+			left: 50%
+			margin-left: -17px
+	&__note
+		position: absolute
+		left: -55px
+		top: -50px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&-block
+		position: relative
+		padding: 30px 0 40px
+		&:before
+			content: ''
+			width: calc(50vw + 20px)
+			height: 100%
+			background-color: #F1F1F1
+			position: absolute
+			top: 0
+			right: -20px
+		&__ttl
+			display: table
+			position: relative
+			font-family: $text-m
+			font-size: 46px
+			margin-bottom: 50px
+		&__subttl
+			max-width: 480px
+			position: relative
+			font-family: $text-b
+			font-size: 22px
+			letter-spacing: 0.03em
+			color: #37ABB6
+			padding-left: 100px
+			margin-left: -100px
+			margin-bottom: 20px
+			i
+				content: ''
+				width: 87px
+				height: 87px
+				background-image: url(../img/paydel_ico.svg)
+				position: absolute
+				top: -5px
+				left: 0
+				z-index: 1
+			&:before
+				content: ''
+				width: 70px
+				height: 70px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				top: -30px
+				left: -40px
+			&:after
+				content: ''
+				width: 40px
+				height: 40px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				top: -15px
+				left: -25px
+		&__txt
+			position: relative
+			padding-top: 20px
+			font-family: $text-m
+			margin-bottom: 20px
+			&:before
+				content: ''
+				width: 380px
+				height: 1px
+				background-color: #000
+				position: absolute
+				top: 0
+				right: 0
+		&__btn
+			position: relative
+			display: table
+			font-family: $text-s
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 70px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+			&:before
+				content: ''
+				width: 80px
+				height: 3px
+				background-color: #252525
+				position: absolute
+				top: 50%
+				left: -40px
+				margin-top: -1.5px
+	&__decor
+		width: 187px
+		height: 304px
+		background-image: url(../img/paydel_pattern2.svg)
+		position: absolute
+		right: 0
+		bottom: 0
+	&__img
+		margin-top: 200px
+
+.services
+	position: relative
+	padding: 50px 0
+	margin: 100px 0
+	&:before
+		content: ''
+		width: 50%
+		height: 100%
+		background: linear-gradient(90deg, rgba(121, 220, 210, 0.44) 0%, #3FB4C7 100%)
+		position: absolute
+		top: 0
+		left: 0
+	&__note
+		position: absolute
+		left: -70px
+		top: -100px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 46px
+		margin-top: 100px
+		color: #fff
+		i
+			display: block
+			width: 60px
+			height: 172px
+			background-image: url(../img/services_ttl.svg)
+			position: absolute
+			top: -100px
+			left: 300px
+		span
+			position: relative
+			z-index: 1
+	&-item
+		overflow: hidden
+		padding: 20px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		margin-bottom: 20px
+		&.it1
+			background-image: url(../img/service1.jpg)
+		&.it2
+			background-image: url(../img/service2.jpg)
+		&.it3
+			background-image: url(../img/service3.jpg)
+		&.it4
+			background-image: url(../img/service4.jpg)
+		&.it5
+			background-image: url(../img/service5.jpg)
+		&__wrap
+			max-width: 230px
+			margin-top: 140px
+			&_right
+				float: right
+		&__ttl
+			font-family: $text-s
+			font-size: 18px
+			margin-bottom: 10px
+		&__btn
+			position: relative
+			display: table
+			font-family: $text-s
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 50px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+
+.reviews
+	background: linear-gradient(91.36deg, #79DCD2 30.9%, #3FB4C7 215.19%)
+	padding: 50px 0
+	&__note
+		position: absolute
+		left: -70px
+		top: -100px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 46px
+		margin-bottom: 50px
+		i
+			display: block
+			width: 165px
+			height: 138px
+			background-image: url(../img/reviews_ttl.svg)
+			position: absolute
+			top: -20px
+			right: -110px
+		span
+			position: relative
+			z-index: 1
+	&-slider
+		&__nav
+			overflow: hidden
+			.slick-arrow
+				cursor: pointer
+				position: relative
+				font-family: $text-s
+				font-size: 34px
+				letter-spacing: 0.03em
+				color: #8F8F8F
+				padding-bottom: 15px
+				transition: all ease .3s
+				&:before
+					content: ''
+					width: 102px
+					height: 24px
+					position: absolute
+					bottom: 0
+					transition: all ease .3s
+				&.slick-prev
+					float: left
+					&:before
+						background-image: url(../img/arrow_back.svg)
+						left: 50%
+						margin-left: -51px
+				&.slick-next
+					float: right
+					&:before
+						background-image: url(../img/arrow_next.svg)
+						right: 50%
+						margin-right: -51px
+				&:hover
+					transition: all ease .3s
+					color: $accent
+					&:before
+						transition: all ease .3s
+						bottom: 30px
+	&-slide
+		outline: none
+		padding: 40px
+		&__numb
+			position: relative
+			font-family: $text-m
+			font-size: 62px
+			color: #3C3C3C
+			margin-bottom: 20px
+			&:before
+				content: ''
+				width: 70px
+				height: 70px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				top: -10px
+				left: -40px
+			&:after
+				content: ''
+				width: 40px
+				height: 40px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				top: 6px
+				left: -25px
+			span
+				position: relative
+				z-index: 1
+		&__txt
+			font-family: $text-m
+			font-size: 18px
+
+.contacts
+	padding-top: 50px
+	&__note
+		position: absolute
+		left: -70px
+		top: -50px
+		z-index: 1
+		width: 190px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		display: table
+		position: relative
+		font-family: $text-m
+		font-size: 46px
+		margin-bottom: 50px
+		padding-left: 135px
+		i
+			display: block
+			width: 234px
+			height: 135px
+			background-image: url(../img/contacts_ttl.svg)
+			position: absolute
+			top: -10px
+			left: 0
+		span
+			position: relative
+			z-index: 1
+	&-item
+		padding: 20px
+		background-color: #ECECEC
+		margin-bottom: 20px
+		&__ico
+			display: block
+			max-width: 53px
+			margin: 0 auto 10px
+		&__addr
+			min-height: 54px
+			font-family: $text-m
+			font-size: 16px
+			color: #000
+			margin-bottom: 10px
+			text-align: center
+		&__link
+			display: block
+			font-family: $text-m
+			color: #000
+			text-align: center
+	&-block
+		&__ico
+			display: table
+			position: relative
+			margin: 0 auto 10px
+			img
+				display: block
+				max-width: 53px
+			&:before
+				content: ''
+				width: 45px
+				height: 45px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				bottom: -15px
+				right: -25px
+			&:after
+				content: ''
+				width: 27px
+				height: 27px
+				background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+				border-radius: 50%
+				position: absolute
+				bottom: -7px
+				right: -16px
+		&__link
+			display: block
+			font-family: $text-m
+			color: #000
+			text-align: center
+
+.map
+	min-height: 380px
+	margin-top: 40px
+
+.foot
+	background: linear-gradient(90deg, #6DD3E3 0%, rgba(121, 220, 210, 0.44) 100%)
+	padding: 15px 0
+	&__soc
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+		&:hover
+			svg path
+				fill: $accent
+	&__dev
+		span
+			font-size: 12px
+			color: #000
+		&:hover
+			span
+				color: #000
+
+.lens
+	position: relative
+	padding-top: 120px
+	&:before
+		content: ''
+		width: 615px
+		height: 700px
+		background-image: url(../img/lens_pattern.svg)
+		position: absolute
+		top: -100px
+		right: 0
+		z-index: -1
+	&__note
+		position: absolute
+		left: -110px
+		bottom: 300px
+		z-index: 1
+		width: 265px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		overflow: hidden
+		position: relative
+		max-width: 400px
+		margin-bottom: 20px
+		span
+			position: relative
+			z-index: 1
+			display: block
+			font-size: 46px
+			color: #5F5B5B
+			b
+				font-family: $text-bl
+				font-size: 150px
+				line-height: 1
+				letter-spacing: 0.03em
+				color: #7EB7DB
+				opacity: 0.6
+			&:last-child
+				float: right
+				margin-top: -20px
+	&__txt
+		margin-bottom: 20px
+		span
+			font-family: $text-s
+	&__btn
+		position: relative
+		display: table
+		margin: 20px auto 0
+		font-family: $text-s
+		letter-spacing: 0.03em
+		color: $accent
+		padding: 8px 40px
+		border: 2px solid $accent
+		border-radius: 50px
+		transition: all ease .3s
+		&:hover
+			background-color: $accent
+			color: #fff
+			transition: all ease .3s
+		&:before
+			content: ''
+			width: 50px
+			height: 3px
+			background-color: #252525
+			position: absolute
+			top: 50%
+			left: -30px
+			margin-top: -1.5px
+		&_one
+			float: right
+	&__img
+		position: relative
+		&:after
+			content: ''
+			width: 434px
+			height: 447px
+			background-image: url(../img/lens_pattern2.svg)
+			position: absolute
+			top: -190px
+			right: -50px
+			z-index: -1
+
+.modal
+	max-width: 900px
+	position: relative
+	background: linear-gradient(90deg, #379288 0%, #3FB4C7 100%)
+	padding: 60px
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background-image: url(../img/modal_bg.png)
+		background-position: center center
+		background-size: cover
+		position: absolute
+		top: 0
+		left: 0
+	&__ttl
+		position: relative
+		z-index: 1
+		font-family: $text-b
+		font-size: 28px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 40px
+	&-img
+		position: relative
+		z-index: 1
+		width: 50%
+		float: left
+	&-right
+		position: relative
+		z-index: 1
+		width: 45%
+		float: right
+	&-form
+		display: table
+		&__ttl
+			font-family: $text-b
+			font-size: 26px
+			color: #fff
+			margin-bottom: 40px
+		.rline
+			position: relative
+			display: table
+			margin: 0 auto 20px
+			&.last
+				margin-bottom: 40px
+		.rfield_error
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 12px
+			color: red
+			visibility: hidden
+		&__input
+			display: block
+			min-width: 210px
+			padding: 4px 0
+			font-family: $text-m
+			font-size: 18px
+			color: #fff
+			border: none
+			border-bottom: 3px solid #fff
+			background-color: transparent
+		&__btn
+			position: relative
+			display: table
+			margin: 0 auto
+			font-family: $text-s
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 40px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+			&:before
+				content: ''
+				width: 50px
+				height: 3px
+				background-color: #fff
+				position: absolute
+				top: 50%
+				left: -20px
+				margin-top: -1.5px
+
+.buy
+	background: linear-gradient(90deg, #79DCD2 0%, #3FB4C7 100%)
+	padding: 60px
+	max-width: 1000px
+	position: relative
+	&:before
+		content: ''
+		width: 285px
+		height: 304px
+		background-image: url(../img/buy_pattern.svg)
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -142px
+	&__half
+		width: 50%
+		float: left
+	&__ttl
+		font-size: 34px
+		color: #0F7A6F
+		margin-bottom: 40px
+		max-width: 300px
+	&__img
+		position: relative
+		&:before
+			content: ''
+			width: 370px
+			height: 370px
+			background: linear-gradient(90deg, #79DCD2 0%, #3FB4C7 100%)
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -165px
+			border-radius: 50%
+		img
+			position: relative
+			z-index: 1
+
+.step-numb
+	float: left
+	width: 70px
+	height: 70px
+	background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+	border-radius: 50% 50%
+	position: relative
+	&:before
+		content: ''
+		width: 42px
+		height: 42px
+		background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+		position: absolute
+		top: 14px
+		left: 14px
+		border-radius: 50% 50%
+	&__line
+		width: 143px
+		height: 9px
+		background-image: url(../img/step_arrow.svg)
+		float: left
+		margin: 30px 20px
+	span
+		position: absolute
+		top: -35px
+		right: -10px
+		font-family: $text-m
+		font-size: 62px
+		color: #37ABB6
+		transition: all ease .3s
+	&.active
+		span
+			color: #3C3C3C
+			top: 20px
+			right: 30px
+
+.selection
+	position: relative
+	&.active
+		padding: 60px 0
+	&__note
+		position: absolute
+		left: -110px
+		bottom: 150px
+		z-index: 1
+		width: 265px
+		font-family: $text-s
+		font-size: 22px
+		color: #404040
+		padding-bottom: 5px
+		transform: rotate(-90deg)
+		&:before
+			content: ''
+			width: 135px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			bottom: 0
+			left: 0
+	&__ttl
+		position: relative
+		font-family: $text-m
+		font-size: 34px
+		color: $accent
+		text-align: center
+		margin: 40px 0 60px
+		&:before
+			content: ''
+			width: 100%
+			height: 22px
+			background: linear-gradient(90deg, rgba(121, 220, 210, 0.22) 0%, rgba(63, 180, 199, 0.5) 100%)
+			position: absolute
+			top: 0
+			left: 0
+	&-form
+		&__row
+			margin-bottom: 20px
+			&.last
+				margin-bottom: 60px
+			&_btn
+				display: table
+				margin: 0 auto
+		&__block
+			float: left
+			margin-right: 112px
+			&:last-child
+				margin-right: 0
+		&__input
+			display: block
+			width: 220px
+			padding: 4px 0
+			font-family: $text-m
+			font-size: 18px
+			color: #000
+			border: none
+			border-bottom: 2px solid #989898
+			background-color: transparent
+			appearance: none
+			&_last
+				width: 270px
+				margin-bottom: 20px
+		&__btn
+			cursor: pointer
+			position: relative
+			z-index: 1
+			display: table
+			float: left
+			font-family: $text-s
+			letter-spacing: 0.03em
+			color: $accent
+			padding: 8px 40px
+			border: 2px solid $accent
+			border-radius: 50px
+			transition: all ease .3s
+			&:hover
+				background-color: $accent
+				color: #fff
+				transition: all ease .3s
+			&:before
+				content: ''
+				width: 80px
+				height: 3px
+				background-color: #252525
+				position: absolute
+				top: 50%
+				left: -40px
+				margin-top: -1.5px
+			&:first-child
+				margin-right: 90px
+			&_last
+				font-size: 16px
+	&__img
+		position: relative
+		&:before
+			content: ''
+			width: 270px
+			height: 270px
+			background: linear-gradient(90deg, #79DCD2 0%, #3FB4C7 100%)
+			border-radius: 50%
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -135px
+			z-index: -1
+		img
+			display: block
+			margin: 0 auto
+	&-cart
+		margin-bottom: 20px
+		&__name
+			max-width: 260px
+			float: left
+			font-family: $text-s
+			font-size: 34px
+			color: #0F7A6F
+			margin-right: 10px
+		&__info
+			font-family: $text-b
+			font-size: 34px
+			color: #404040
+	&__more
+		display: table
+		font-family: $text-m
+		font-size: 24px
+		color: #37ABB6
+		padding: 0 60px 15px 0
+		border-bottom: 2px solid #3FB4C7
+		background-image: url(../img/selection_more.svg)
+		background-position: right top
+		background-size: 34px 34px
+		background-repeat: no-repeat
+		margin-bottom: 40px
+	&__txt
+		font-family: $text-m
+		font-size: 22px
+		line-height: 35px
+		padding-left: 65px
+		margin-bottom: 10px
+		background-position: 0 0
+		background-size: 35px 35px
+		background-repeat: no-repeat
+		&_i1
+			background-image: url(../img/selection_ico1.svg)
+		&_i2
+			background-image: url(../img/selection_ico2.svg)
+			margin-bottom: 40px
+	&-solution
+		overflow: hidden
+		max-height: 0
+		transition: all ease .3s
+		&.active
+			max-height: 200vh
+			margin-bottom: 40px
+			overflow: visible
+			transition: all ease .3s
+		&__block
+			position: relative
+			width: 210px
+			min-height: 386px
+			float: left
+			margin-right: 15px
+			padding: 0 20px 20px
+			&:before
+				content: ''
+				width: 100%
+				height: 90%
+				background: #FCFCFC
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+				position: absolute
+				bottom: 0
+				left: 0
+				z-index: -1
+			&:last-child
+				margin-right: 0
+			&_lens
+				width: 280px
+				min-height: inherit
+				margin-bottom: 40px
+		&__name
+			font-size: 22px
+			color: #151515
+			text-align: center
+			margin-bottom: 20px
+		&__img
+			display: block
+			max-width: 100%
+			margin: 0 auto 20px
+	.rline
+		display: table
+		position: relative
+	.rfield_error
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 12px
+		color: red
+		visibility: hidden
+	&-last
+		position: relative
+		&:before
+			content: ''
+			width: 80%
+			height: 90%
+			background: #F6F6F6
+			position: absolute
+			bottom: 0
+			left: 10%
+			z-index: -1
+		&:after
+			content: ''
+			width: 285px
+			height: 303px
+			background-image: url(../img/selection_last.svg)
+			position: absolute
+			top: -50px
+			left: 50%
+			margin-left: -142px
+
+
+select.selection-form__input
+	outline: none
+	background-image: url(../img/select_arrow.svg)
+	background-position: right top
+	background-size: 27px 27px
+	background-repeat: no-repeat
+
+.checkbox
+	position: relative
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+	&__text 
+		position: relative
+		padding: 0 0 0 30px
+		cursor: pointer
+		font-family: $text-m
+		&:before 
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background: transparent
+			border: 1px solid #000
+			transition: .2s
+
+.checkbox input:checked + .checkbox__text:before 
+	background: #000
+
+.slide1, .slide2, .slide3, .selection
+	max-height: 0
+	overflow: hidden
+	transition: max-height ease .3s
+	&.active
+		max-height: 200vh
+		padding: 50px 0
+		transition: max-height ease .3s
+
+.selection-volume
+	margin-bottom: 40px
+	&__txt
+		font-family: $text-m
+		font-size: 24px
+		color: #37abb6
+		float: left
+		margin-right: 20px
+	&__select
+		display: block
+		float: left
+		width: 150px
+		padding: 4px 0
+		font-family: $text-m
+		font-size: 18px
+		color: #000
+		border: none
+		border-bottom: 2px solid #989898
+		background-color: transparent
+		appearance: none
+		outline: none
+		background-image: url(../img/select_arrow.svg)
+		background-position: right top
+		background-size: 27px 27px
+		background-repeat: no-repeat
+
+@keyframes pulse
+	from
+		transform: scale3d(1, 1, 1)
+	50%
+		transform: scale3d(0.5, 0.5, 0.5)
+	to
+	transform: scale3d(1, 1, 1)
+
+@keyframes fadeInLeft
+	from
+		opacity: 0
+		transform: translate3d(-100%, 0, 0)
+	to
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+
+.fadeInLeft
+	animation-name: fadeInLeft
+
+.animated
+	animation-duration: 1s
+	animation-fill-mode: both
+
+.cart__name
+	opacity: 0
+
+.cart.animated
+	.cart__name
+		animation-name: fadeInLeft
+		animation-duration: 1s
+		animation-fill-mode: both
+
+@import "media" // Always at the end

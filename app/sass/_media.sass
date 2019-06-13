@@ -1,0 +1,443 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+	.grid
+		max-width: 1140px
+	.delivery
+		&:before
+			width: 430px
+			height: 347px
+			background-size: cover
+		&_second
+			&:before
+				width: 300px
+				height: 275px
+				background-size: cover
+	.contacts
+		&-block
+			&__link
+				font-size: 14px
+		&-item
+			&__addr
+				font-size: 14px
+			&__link
+				font-size: 12px
+	.lens
+		&__btn
+			padding: 8px 25px
+	.selection
+		&__ttl
+			font-size: 30px
+		&-form
+			&__block
+				margin-right: 40px
+		&-solution
+			&__block
+				width: 236px
+				min-height: 357px
+				&_lens
+					width: 231px
+					min-height: 298px
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.cart
+		&-block
+			&__img
+				max-width: 230px
+	.delivery
+		&:before
+			display: none
+		&__ttl
+			font-size: 40px
+	.services
+		&__ttl
+			font-size: 36px
+		&-item
+			position: relative
+			&:before
+				content: ''
+				width: 100%
+				height: 100%
+				background-color: rgba(#fff, .5)
+				position: absolute
+				left: 0
+				top: 0
+			&__wrap
+				position: relative
+				z-index: 1
+	.lens
+		&__img
+			img
+				display: block
+				max-width: 100%
+		&__btn
+			font-size: 13px
+	.selection
+		&__ttl
+			font-size: 24px
+			&:before
+				height: 15px
+		&-form
+			&__block
+				margin-right: 10px
+			&__input
+				width: 200px
+	.selection
+		&-solution
+			&__block
+				width: 196px
+				&_lens
+					width: 191px
+		&-last
+			&:before
+				width: 100%
+				left: 0
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.nav
+		&-list
+			&__item
+				margin-right: 20px
+	.head
+		&__ttl
+			max-width: inherit
+			&:before
+				right: 0
+		&-slider
+			&__slide
+				&_slide1
+					&:after
+						width: 100%
+				&_slide2
+					&:before
+						width: 100%
+		&-img2
+			margin: 0 auto
+		&-block
+			&:before
+				width: 110%
+				left: -5%
+	.advantages
+		&-item
+			margin: 80px auto 0
+	.cart
+		margin-bottom: 40px
+		&_last
+			margin-top: inherit
+			margin-bottom: 0
+	.delivery
+		&__ttl
+			display: block
+			text-align: center
+		&__subttl
+			margin: 0 auto 10px
+		&__txt
+			max-width: inherit
+			text-align: center
+		&-form
+			margin: 0 auto
+	.about
+		&:before
+			display: none
+		&__btn
+			margin: 0 auto 40px
+		&-slider
+			&:before
+				display: none
+	.paydel
+		&:before
+			top: inherit
+			bottom: 0
+		&:after
+			height: 50%
+		&__img
+			margin-top: 40px
+		&-block
+			&:before
+				display: none
+			&__subttl
+				margin-left: 20px
+	.services
+		&:before
+			display: none
+		&__ttl
+			margin-top: 0
+			margin-bottom: 40px
+			color: #000
+		&-item
+			&:before
+				opacity: 0
+	.map
+		margin-top: 40px
+	.selection
+		&-form
+			&__block
+				margin-right: 50px
+	.selection
+		&-solution
+			&__block
+				width: 223px
+				&_lens
+					width: 218px
+					min-height: 298px
+		&-last
+			&:after
+				display: none
+		.rline
+			margin: 0 auto
+		&-form
+			&__btn
+				&_last
+					margin: 0 auto
+					float: none
+	.dot
+		display: none
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.nav
+		&-top
+			padding: 15px 0
+			&__lang
+				float: left
+				margin-left: 10px
+			&__phone
+				&_mob
+					border: none
+					padding: 0
+					margin-left: 20px
+		&-mob
+			overflow: hidden
+			width: 100%
+			height: 0
+			position: fixed
+			top: 70px
+			left: 0
+			background-color: #fff
+			z-index: 2
+			transition: all ease .3s
+			&.active
+				height: 235px
+				transition: all ease .3s
+			&__link
+				float: right
+		&-list
+			padding-bottom: 15px
+			display: block
+			&__item
+				display: block
+				padding: 5px 20px
+	.head
+		padding-top: 70px
+		&__img
+			max-width: 100%
+			display: block
+	.advantages
+		&__ttl
+			&:before, &:after
+				display: none
+		&__img
+			margin-top: 40px
+	.delivery
+		&-form
+			.rline.mr100
+				margin-right: 50px
+	.about
+		&-item
+			&:last-child
+				&:before
+					display: none
+	.contacts
+		&-block
+			margin: 40px 0
+	.modal
+		padding: 20px
+		&-img
+			float: none
+			width: 100%
+		&-right
+			float: none
+			width: 100%
+		&__ttl
+			font-size: 24px
+			text-align: center
+		&-form
+			margin: 0 auto 40px
+			&__ttl
+				font-size: 24px
+				text-align: center
+	.lens
+		padding-top: 70px
+		&:before
+			display: none
+		&__ttl
+			max-width: 350px
+			span
+				font-size: 40px
+			b
+				font-size: 100px
+		&__btn
+			&_one
+				float: none
+	.selection
+		&-form
+			&__block
+				margin-bottom: 10px
+			&__row
+				&.last
+					margin-bottom: 50px
+		&-solution
+			&__block
+				width: 100%
+				margin-right: 0
+				min-height: inherit
+				margin-bottom: 20px
+	.buy
+		&__half
+			width: 100%
+			float: none
+		&__ttl
+			max-width: inherit
+			text-align: center
+
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.head
+		margin-bottom: 0
+		&__ttl
+			text-align: center
+		&__txt
+			margin-left: 0
+			text-align: center
+		&__btn
+			margin: 20px auto 0
+		&__img
+			&_abs
+				display: none !important
+		&-block
+			&__ttl
+				text-align: center
+			&__subttl
+				text-align: center
+			&:before
+				width: calc(100% +20px)
+				left: -10px
+		&-slider
+			&__nav
+				margin-top: 0
+	.advantages
+		&__ttl
+			font-size: 38px
+			i
+				display: none
+	.delivery
+		&__ttl
+			i
+				display: none
+	.cart
+		&-block
+			top: 0
+			margin-top: 0
+			&__half
+				width: 100%
+				float: none
+			&__btn
+				margin: 0 auto
+			&__img
+				display: block
+				max-width: 100%
+				float: none
+				margin: 20px auto 60px
+	.delivery
+		&__ttl
+			padding-bottom: 50px
+		&__subttl
+			text-align: center
+		&-form
+			.rline
+				display: table
+				margin: 0 auto 20px
+				&.mr100
+					margin-right: auto
+	.catalog
+		&__ttl
+			padding-bottom: 50px
+	.about
+		&-item
+			margin-bottom: 50px
+		&__txt
+			margin-top: 0
+	.paydel
+		&-block
+			padding: 0
+	.services
+		&__ttl
+			i
+				display: none
+		margin: 0
+		&-item
+			&:before
+				opacity: 1
+	.map
+		margin-top: 0
+	.selection
+		&-form
+			&__block
+				display: table
+				margin: 0 auto 20px
+				float: none
+				&:last-child
+					margin-right: auto
+			&__btn
+				margin: 0 auto
+				float: none
+				&:first-child
+					margin: 0 auto 20px
+			&__input
+				&_last
+					width: 230px
+		&-cart
+			&__name
+				max-width: 180px
+				font-size: 24px
+			&__info
+				font-size: 24px
+		&__more
+			font-size: 20px
+	.step
+		&-numb
+			width: 50px
+			height: 50px
+			margin: 0 20px
+			&:before
+				width: 26px
+				height: 26px
+				top: 12px
+				left: 12px
+			&__line
+				display: none
+			span
+				font-size: 40px
+				top: -20px
+	.contacts
+		&__ttl
+			padding-left: 0
+			text-align: center
+			i
+				display: none
+	.selection.active
+		padding-bottom: 0
+	.selection.active, .slide1.active, .slide2.active, .slide3.active
+		max-height: 500vh
+
+
