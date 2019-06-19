@@ -1451,12 +1451,13 @@ button
 		padding: 20px
 		background-color: #ECECEC
 		margin-bottom: 20px
+		min-height: 207px
 		&__ico
 			display: block
 			max-width: 53px
 			margin: 0 auto 10px
 		&__addr
-			min-height: 54px
+			min-height: 45px
 			font-family: $text-m
 			font-size: 16px
 			color: #000
@@ -1580,7 +1581,7 @@ button
 	&__btn
 		position: relative
 		display: table
-		margin: 20px auto 0
+		//margin: 20px auto 0
 		font-family: $text-s
 		letter-spacing: 0.03em
 		color: $accent
@@ -1602,7 +1603,7 @@ button
 			left: -30px
 			margin-top: -1.5px
 		&_one
-			float: right
+			//float: right
 	&__img
 		position: relative
 		&:after
@@ -1828,6 +1829,9 @@ button
 			margin-right: 112px
 			&:last-child
 				margin-right: 0
+			&_lens
+				width: 210px
+				margin-right: 15px
 		&__input
 			display: block
 			width: 220px
@@ -1842,6 +1846,10 @@ button
 			&_last
 				width: 270px
 				margin-bottom: 20px
+			&::placeholder
+				color: #9c9c9c
+			&_lens
+				width: 210px
 		&__btn
 			cursor: pointer
 			position: relative
@@ -1872,6 +1880,8 @@ button
 				margin-right: 90px
 			&_last
 				font-size: 16px
+			&.first
+				margin-right: 0
 	&__img
 		position: relative
 		&:before
@@ -1956,9 +1966,10 @@ button
 			&:last-child
 				margin-right: 0
 			&_lens
-				width: 280px
-				min-height: inherit
+				min-height: 294px
 				margin-bottom: 40px
+				&:nth-child(3)
+					margin-right: 0
 		&__name
 			font-size: 22px
 			color: #151515

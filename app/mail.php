@@ -4,6 +4,7 @@
 	if(isset ($_POST['phone'])) {$phonenum=$_POST['phone'];}
 
 	if(isset ($_POST['type'])) {$type=$_POST['type'];}
+	if(isset ($_POST['pack'])) {$pack=$_POST['pack'];}
 	if(isset ($_POST['radius'])) {$radius=$_POST['radius'];}
 
 	if(isset ($_POST['right'])) {$right=$_POST['right'];}
@@ -26,10 +27,11 @@
 	$to = "crm@elit-optika.com.ua"; // Замениь на емаил клиента
 
 	$message = "Форма: $title <br><br>";
-	if ( $name || $phonenum || $type || $radius || $rightforce || $rightquantity || $leftforce || $leftquantity || $solution || $postal || $lens || $volume ) {
+	if ( $name || $phonenum || $pack || $type || $radius || $rightforce || $rightquantity || $leftforce || $leftquantity || $solution || $postal || $lens || $volume ) {
 		$message .= ""
 			. ( $name ?" Имя:  $name <br>" : "")
 			. ( $phonenum ?" Телефон:  $phonenum <br>" : "")
+			. ( $pack ?" $pack <br>" : "")
 			. ( $type ?" Одинаковые/разные:  $type <br>" : "")
 			. ( $radius ?" Радиус:  $radius <br>" : "")
 			. ( $rightforce ?" Оптическая сила:  $rightforce <br>" : "")

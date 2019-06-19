@@ -42,7 +42,22 @@ gulp.task('js', function() {
 	.pipe(browsersync.reload({ stream: true }))
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('js-ukr', function() {
+	return gulp.src([
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/fancybox/dist/jquery.fancybox.min.js',
+		'app/libs/required_fields/jquery.maskedinput.min.js',
+		'app/libs/required_fields/required_fields_ukr.js',
+		'app/libs/slick-carousel/slick/slick.min.js',
+		'app/js/common.js', // Always at the end
+		])
+	.pipe(concat('scripts-ukr.min.js'))
+	.pipe(uglify()) // Mifify js (opt.)
+	.pipe(gulp.dest('app/js'))
+	.pipe(browsersync.reload({ stream: true }))
+});
+
+gulp.task('watch', ['sass', 'js', 'js-ukr', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload);

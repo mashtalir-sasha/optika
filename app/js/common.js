@@ -29,10 +29,8 @@ $(function() {
 			data: data,
 			success: (function() {
 				$.fancybox.close();
-				$.fancybox.open('<div class="thn"><h3>Заявка отправлена!</h3><p>С Вами свяжутся в ближайшее время.</p></div>');
-				//gtag('event','submit',{'event_category':'submit','event_action':goalId});
-				//fbq('track', 'Lead');
-				$(this).find("input[name=name], input[name=phone], input[name=postal]").val();
+				$.fancybox.open({src:'#thn'});
+				$('form').find("input[name=name], input[name=phone], input[name=postal]").val('');
 			})()
 		});
 		return false;
@@ -82,7 +80,7 @@ $(function() {
 		nextArrow: '<button type="button" class="slick-next">NEXT</button>'
 	});
 
-	$('.buyBtn').click(function(e) {
+	/*$('.buyBtn').click(function(e) {
 		$('.selection, .slide1, .slide2, .slide3, .step-numb').removeClass('active');
 		$('.selection').addClass('active');
 		$('.slide1').addClass('active');
@@ -91,7 +89,7 @@ $(function() {
 			scrollTop: $('.selection').offset().top
 		}, 300);
 		e.preventDefault();
-	});
+	});*/
 
 	$('.back').click(function(e) {
 		var numbSlide = $(this).data('slide');
@@ -140,11 +138,13 @@ $(function() {
 	$('.selection-form').on('change',function() {
 		var type = $(".type option:selected").data('one');
 		if (type == 1 ) {
-			$('.typeSelect').css('opacity', '.3');
-			$('.typeSelect').attr('disabled', 'disabled');
+			$('.typeSelect').css('display', 'none');
+			/*$('.typeSelect').css('opacity', '.3');
+			$('.typeSelect').attr('disabled', 'disabled');*/
 		} else {
-			$('.typeSelect').css('opacity', '1');
-			$('.typeSelect').removeAttr('disabled');
+			$('.typeSelect').css('display', 'block');
+			/*$('.typeSelect').css('opacity', '1');
+			$('.typeSelect').removeAttr('disabled');*/
 		}
 	});
 
@@ -155,23 +155,12 @@ $(function() {
 		var	price =  $(this).find("input").data('price');
 		$('.append').empty();
 		if (checkbox == true) {
-			$('.append').append('<div class="selection-cart clearfix"><div class="selection-cart__name">'+name+'</div><div class="selection-cart__info">× <span class="quantity">'+quantity+'</span> = <span class="price">'+price+'</span> грн</div></div>');
+			$('.append').append('<div class="selection-cart clearfix"><div class="selection-cart__name">'+name+'</div><div class="selection-cart__info">× <span class="quantity">'+quantity+'</span> = <span class="price">'+price+'</span> грн.</div></div>');
 		}
 	});
 
-	$('.checkSolution').click(function(e) {
-		var checkbox = $(this).find("input").prop('checked');
-		var	name =  $(this).find("input").data('name');
-		var	quantity =  $(this).find("input").data('quantity');
-		var	price =  $(this).find("input").data('price');
-		$('.append').empty();
-		if (checkbox == true) {
-			$('.append').append('<div class="selection-cart clearfix"><div class="selection-cart__name">'+name+'</div><div class="selection-cart__info">× <span class="quantity firstQuantity">'+quantity+'</span> = <span class="price firstPrice">'+price+'</span> грн</div></div>');
-		}
-	});
-
-	$('select').on('change',function() {
-		var firstPrice = parseInt( $('.firstPrice').html() );
+	$('.formLens').on('change',function() {
+		var firstPrice = parseInt( $('.pack option:selected').data('price') );
 		var rightQuantity = parseInt( $('[name=right-quantity]').val() );
 		if (rightQuantity == 0) {
 			var rightQuantity = 1;
@@ -188,7 +177,44 @@ $(function() {
 		var fullFirstPrice = rightPrice + leftPrice;
 		var fullFirstQuantity = rightQuantity + leftQuantity;
 		$('.firstPrice').html(fullFirstPrice);
-		$('.firstQuantity').html(fullFirstQuantity);
+		$('.firstQuantity').html(fullFirstQuantity+' шт.');
+	});
+
+	$('.checkSolution').click(function(e) {
+		var checkbox = $(this).find("input").prop('checked');
+		var	name =  $(this).find("input").data('name');
+		var	quantity =  $(this).find("input").data('quantity');
+		var	price =  $(this).find("input").data('price');
+		var firstPrice = price;
+		$('.append').empty();
+		if (checkbox == true) {
+			$('.append').append('<div class="selection-cart clearfix"><div class="selection-cart__name">'+name+'</div><div class="selection-cart__info">× <span class="quantity firstQuantity">'+quantity+'</span> = <span class="price firstPrice">'+price+'</span> грн.</div></div>');
+		}
+	});
+
+	$('.formSolution').on('change',function() {
+		var firstPrice = $('.checkSolution').find("input:checked").data('price');
+		var price = $('.checkSolution').find("input:checked").data('price');
+		var	name =  $('.checkSolution').find("input:checked").data('name');
+		var	quantity =  $('.checkSolution').find("input:checked").data('quantity');
+
+		var rightQuantity = parseInt( $('[name=right-quantity]').val() );
+		if (rightQuantity == 0) {
+			var rightQuantity = 1;
+			var rightPrice = firstPrice * rightQuantity;
+		} else {
+			var rightPrice = firstPrice * rightQuantity;
+		}
+		var leftQuantity = parseInt( $('[name=left-quantity]').val() );
+		if (leftQuantity == 0) {
+			var leftPrice = 0;
+		} else {
+			var leftPrice = firstPrice * leftQuantity;
+		}
+		var fullFirstPrice = rightPrice + leftPrice;
+		var fullFirstQuantity = rightQuantity + leftQuantity;
+		$('.firstPrice').html(fullFirstPrice);
+		$('.firstQuantity').html(fullFirstQuantity+' шт.');
 	});
 
 	$('.selection-volume__select').on('change',function() {

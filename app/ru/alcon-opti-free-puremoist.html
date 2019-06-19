@@ -85,12 +85,12 @@
 					<div class="col-md-5">
 						<h1 class="lens__ttl"><span><b>A</b>lcon Opti</span><span>Free PureMoist</span></h1>
 						<img src="/img/cart4.png" alt="optika" class="img-r d-block d-md-none lens__small">
-						<p class="lens__txt">Opti-Free PureMoist — це нова розробка багатофункціонального розчину для контактних лінз від компанії Alcon. Він призначений для очищення, дизенфекції, зберігання і завдяки інноваційному компоненту HydraGlyde Moisture Matrix,для максимального зволоження контактних лінз. Opti-Free PureMoist можна вільно використовувати при підвищеній чуттєвості очей.<br><br>Також компанія Alcon відзначилася серед інших у питанні очищення лінз від жирових відкладень та вже отримала позитивні відгуки споживачів. Завдяки використанню цитрату натрію (лимонна кислота), котрий виявився максимально ефективним при видаленні жирових відкладень з поверхні контактних лінз.<br><br>При всьому цьому правила використання лінз Opti-Free PureMoist дуже прості: залити розчин у контейнер і помістити туди лінзи на ніч.</p>
+						<p class="lens__txt">Opti-Free PureMoist— это новая разработка многофункционального раствора для контактных линз от компании Alcon. Он предназначен для очистки, дезинфекции, хранения и, благодаря инновационному компоненту HydraGlyde Moisture Matrix, для максимального увлажнения контактных линз. Opti-Free PureMoist легко можно использовать при повышенной чувствительности глаз.<br><br>Также компания Alcon выделилась среди других в вопросе очистки линз от жировых отложений и уже получила положительные отзывы потребителей. Благодаря применению цитрата натрия (лимонной кислоты), который оказался максимально эффективным при удаления жировых отложений с поверхности контактных линз.<br><br>При этом правила пользования линзами Opti-Free PureMoist предельно просты: залить раствор в контейнер и поместить туда линзы на ночь.</p>
 						<div class="row">
-							<div class="col-md-5 col-sm-6">
+							<!-- <div class="col-md-5 col-sm-6">
 								<a href="#" class="lens__btn buyBtn">Купить</a>
-							</div>
-							<div class="col-md-7 col-sm-6">
+							</div> -->
+							<div class="col">
 								<a href="#buy" class="lens__btn lens__btn_one fancybox">Купить в один клик</a>
 							</div>
 						</div>
@@ -104,8 +104,8 @@
 			</div>
 		</header>
 
-		<section class="selection">
-			<form action="mail.php" class="selection-form form_check">
+		<section class="selection active">
+			<form action="mail.php" class="selection-form form_check formSolution">
 				<input type="hidden" name="title" value="Заказ: Avizor Unica Sensitive">
 				<div class="container">
 					<div class="row justify-content-center">
@@ -119,7 +119,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row slide1">
+					<div class="row slide1 active">
 						<div class="col-md-4 d-none d-md-block">
 							<div class="selection__img">
 								<img src="/img/cart4.png" alt="optika" class="img-r">
@@ -168,12 +168,12 @@
 									<div class="selection-solution__name">Bausch & Lomb Pure Vision2</div>
 									<img src="/img/solution_small6.png" alt="optika" class="selection-solution__img">
 									<label class="checkbox checkSolution">
-										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 1 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="1 шт" data-price="240">
-										<div class="checkbox__text">1шт - 240 грн.</div>
+										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 1 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="1 шт" data-price="235">
+										<div class="checkbox__text">1шт - 235 грн.</div>
 									</label>
 									<label class="checkbox checkSolution">
-										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 3 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="3 шт" data-price="630">
-										<div class="checkbox__text">3 шт - 630 грн.</div>
+										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 3 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="3 шт" data-price="612">
+										<div class="checkbox__text">3 шт - 612 грн.</div>
 									</label>
 								</div>
 								<div class="selection-form__row clearfix">
@@ -272,14 +272,14 @@
 										</select>
 									</div>
 								</div>
-								<div class="selection-form__row clearfix">
+								<div class="selection-form__row clearfix typeSelect" style="display: none">
 									<div class="selection-form__block">
 										<div class="rline">
-											<input type="text" name="left" value="Левый" disabled class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+											<input type="text" name="left" value="Левый" disabled class="selection-form__input">
 										</div>
 									</div>
 									<div class="selection-form__block">
-										<select name="left-force" class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+										<select name="left-force" class="selection-form__input">
 											<option default>Оптическая сила:</option>
 											<option value="-0.5">-0.5</option>
 											<option value="-0.75">-0.75</option>
@@ -338,7 +338,7 @@
 										</select>
 									</div>
 									<div class="selection-form__block">
-										<select name="left-quantity" class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+										<select name="left-quantity" class="selection-form__input">
 											<option value="0" default>Количество:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -354,11 +354,11 @@
 									</div>
 								</div>
 							</div>
-							<p class="selection__txt selection__txt_i1">Бесплатная доставка по Украине</p>
+							<p class="selection__txt selection__txt_i1">Доставка по всей Украине</p>
 							<p class="selection__txt selection__txt_i2">Отправка в день заказа</p>
 							<div class="selection-form__row clearfix selection-form__row_btn">
-								<a href="#" class="selection-form__btn back" data-slide="0">Вернуться назад</a>
-								<a href="#" class="selection-form__btn next" data-slide="2">Далее</a>
+								<!-- <a href="#" class="selection-form__btn back" data-slide="0">Вернуться назад</a> -->
+								<a href="#" class="selection-form__btn next first" data-slide="2">Далее</a>
 							</div>
 						</div>
 					</div>
@@ -403,61 +403,61 @@
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр. Шевченка, 36</p>
+							<p class="contacts-item__addr">г.Львов<br>Пр. Шевченка, 36</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Івана Франка, 55</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Ивана Франка, 55</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Петра Дорошенка, 40</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Петра Дорошенка, 40</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Степана Бандери, 25</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Степана Бандеры, 25</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр.Чорновола, 19</p>
+							<p class="contacts-item__addr">г.Львов<br>Пр.Чорновола, 19</p>
 						</div>
 					</div>
 					<div class="col-md-2 offset-md-1 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Личаківська, 45</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Личаковская, 45</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Наукова, 35а, ТЦ "ВАМ"</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Научная, 35а, ТЦ "ВАМ"</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр. Свободи, 5, ТЦ "Плазма"</p>
+							<p class="contacts-item__addr">г.Львов<br>Пр. Свободы, 5, ТЦ "Плазма"</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Кульпарківська, 226а, ТРЦ Вікторія Гарденс</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Кульпарковская, 226а, ТРЦ Виктория Гарденс</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Мазепи, 1б, СТРЦ Спартак</p>
+							<p class="contacts-item__addr">г.Львов<br>Ул. Мазепы, 1б, СТРЦ Спартак</p>
 						</div>
 					</div>
 				</div>
@@ -523,6 +523,10 @@
 	</div>
 
 	<div class="d-none">
+		<div id="thn" class="thn">
+			<h3>Заявка отправлена!</h3>
+			<p>С Вами свяжутся в ближайшее время.</p>
+		</div>
 		<div id="buy" class="buy">
 			<div class="buy__half">
 				<h3 class="buy__ttl">Alcon Opti Free PureMoist</h3>
@@ -537,7 +541,7 @@
 					<div class="rline last">
 						<input type="text" name="postal" class="rfield modal-form__input" placeholder="Город и отделение НП:">
 					</div>
-					<button type="submit" class="btnsubmit modal-form__btn">Отправить наложенным платежом</button>
+					<button type="submit" class="btnsubmit modal-form__btn">Отправить</button>
 				</form>
 			</div>
 			<div class="buy__half d-none d-sm-block">

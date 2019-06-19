@@ -85,12 +85,12 @@
 					<div class="col-md-5">
 						<h1 class="lens__ttl"><span><b>B</b>ausch &</span><span>Lomb</span></h1>
 						<img src="/img/cart6.png" alt="optika" class="img-r d-block d-md-none lens__small">
-						<p class="lens__txt">Багатоцільовий розчин для контактних лінз ReNu MultiPlus від американської компанії  Bausch&Lomb відмінно підходить для очищення, дезінфекції і зберігання будь якого виду лінз. Розчин має у собі три активних компоненти:<br><br>DYMED (Даймед) – для широкого спектру дезінфекції. Знищує усі види шкідливих мікроорганізмів, включаючи гриби та акантамеби. Poloxamin (Полоксамін) забезпечує максимальне очищення від поверхневих відкладень. HYDRANATE (Гидранат) дозволяє відмовитись від додаткового чищення ферментними препаратами, тому як відмінно порається з білковим відкладенням. Але може викликати реакції в людей з чуттєвими очами. У такій ситуації можна використати багатофункціональний розчин Renu MPS, який не має у собі HYDRANATE (Гидранат).</p>
+						<p class="lens__txt">Багатоцільовий розчин для контактних лінз ReNu MultiPlus від американської компанії  Bausch&Lomb відмінно підходить для очищення, дезінфекції і зберігання будь якого виду лінз. Розчин має у собі три активних компоненти:<br><br>DYMED (Даймед) – для широкого спектру дезінфекції. Знищує усі види шкідливих мікроорганізмів, включаючи гриби та акантамеби. Poloxamin (Полоксамін) забезпечує максимальне очищення від поверхневих відкладень. HYDRANATE (Гідранат) дозволяє відмовитись від додаткового чищення ферментними препаратами, тому як відмінно порається з білковим відкладенням. Але може викликати реакції в людей з чуттєвими очами. У такій ситуації можна використати багатофункціональний розчин Renu MPS, який не має у собі HYDRANATE (Гідранат).</p>
 						<div class="row">
-							<div class="col-md-5 col-sm-6">
+							<!-- <div class="col-md-5 col-sm-6">
 								<a href="#" class="lens__btn buyBtn">Придбати</a>
-							</div>
-							<div class="col-md-7 col-sm-6">
+							</div> -->
+							<div class="col">
 								<a href="#buy" class="lens__btn lens__btn_one fancybox">Придбати в один клік</a>
 							</div>
 						</div>
@@ -104,8 +104,8 @@
 			</div>
 		</header>
 
-		<section class="selection">
-			<form action="mail.php" class="selection-form form_check">
+		<section class="selection active">
+			<form action="mail.php" class="selection-form form_check formSolution">
 				<input type="hidden" name="title" value="Заказ: Avizor Unica Sensitive">
 				<div class="container">
 					<div class="row justify-content-center">
@@ -119,13 +119,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="row slide1">
+					<div class="row slide1 active">
 						<div class="col-md-4 d-none d-md-block">
 							<div class="selection__img">
 								<img src="/img/cart6.png" alt="optika" class="img-r">
 							</div>
 						</div>
-						<div class="col-xl-6 col-md-8">
+						<div class="col-xl-8 col-md-8">
 							<div class="selection-volume clearfix">
 								<p class="selection-volume__txt">Виберіть об'єм</p>
 								<select name="volume" class="selection-volume__select">
@@ -140,7 +140,7 @@
 								<div class="selection-cart__info">× <span class="quantity volumeCart">100 мг.</span> = <span class="price priceCart">184</span> грн.</div>
 							</div>
 							<div class="append"></div>
-							<div class="selection__more">Подобрать линзы</div>
+							<div class="selection__more">Підібрати лінзи</div>
 							<div class="selection-solution clearfix">
 								<div class="selection-solution__block selection-solution__block_lens">
 									<div class="selection-solution__name">Lenses Cooper Vision</div>
@@ -170,12 +170,12 @@
 									<div class="selection-solution__name">Bausch & Lomb Pure Vision2</div>
 									<img src="/img/solution_small6.png" alt="optika" class="selection-solution__img">
 									<label class="checkbox checkSolution">
-										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 1 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="1 шт" data-price="240">
-										<div class="checkbox__text">1шт - 240 грн.</div>
+										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 1 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="1 шт" data-price="235">
+										<div class="checkbox__text">1шт - 235 грн.</div>
 									</label>
 									<label class="checkbox checkSolution">
-										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 3 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="3 шт" data-price="630">
-										<div class="checkbox__text">3 шт - 630 грн.</div>
+										<input type="radio" name="lens" value="Bausch & Lomb Pure Vision2 3 шт" data-name="Bausch & Lomb Pure Vision2" data-quantity="3 шт" data-price="612">
+										<div class="checkbox__text">3 шт - 612 грн.</div>
 									</label>
 								</div>
 								<div class="selection-form__row clearfix">
@@ -274,14 +274,14 @@
 										</select>
 									</div>
 								</div>
-								<div class="selection-form__row clearfix">
+								<div class="selection-form__row clearfix typeSelect" style="display: none">
 									<div class="selection-form__block">
 										<div class="rline">
-											<input type="text" name="left" value="Лівий" disabled class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+											<input type="text" name="left" value="Лівий" disabled class="selection-form__input">
 										</div>
 									</div>
 									<div class="selection-form__block">
-										<select name="left-force" class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+										<select name="left-force" class="selection-form__input">
 											<option default>Оптична сила:</option>
 											<option value="-0.5">-0.5</option>
 											<option value="-0.75">-0.75</option>
@@ -340,7 +340,7 @@
 										</select>
 									</div>
 									<div class="selection-form__block">
-										<select name="left-quantity" class="selection-form__input typeSelect" disabled="disabled" style="opacity: .3">
+										<select name="left-quantity" class="selection-form__input">
 											<option value="0" default>Кількість:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -356,11 +356,11 @@
 									</div>
 								</div>
 							</div>
-							<p class="selection__txt selection__txt_i1">Бескоштовна доставка по Україні</p>
-							<p class="selection__txt selection__txt_i2">Відправка у день замовлення</p>
+							<p class="selection__txt selection__txt_i1">Доставка по всій Україні</p>
+							<p class="selection__txt selection__txt_i2">Відправка в день замовлення</p>
 							<div class="selection-form__row clearfix selection-form__row_btn">
-								<a href="#" class="selection-form__btn back" data-slide="0">Повернутися назад</a>
-								<a href="#" class="selection-form__btn next" data-slide="2">Далі</a>
+								<!-- <a href="#" class="selection-form__btn back" data-slide="0">Повернутися назад</a> -->
+								<a href="#" class="selection-form__btn next first" data-slide="2">Далі</a>
 							</div>
 						</div>
 					</div>
@@ -405,61 +405,61 @@
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр. Шевченка, 36</p>
+							<p class="contacts-item__addr">м.Львів<br>Пр. Шевченка, 36</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Івана Франка, 55</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Івана Франка, 55</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Петра Дорошенка, 40</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Петра Дорошенка, 40</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Степана Бандери, 25</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Степана Бандери, 25</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр.Чорновола, 19</p>
+							<p class="contacts-item__addr">м.Львів<br>Пр.Чорновола, 19</p>
 						</div>
 					</div>
 					<div class="col-md-2 offset-md-1 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Личаківська, 45</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Личаківська, 45</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Наукова, 35а, ТЦ "ВАМ"</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Наукова, 35а, ТЦ "ВАМ"</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Пр. Свободи, 5, ТЦ "Плазма"</p>
+							<p class="contacts-item__addr">м.Львів<br>Пр. Свободи, 5, ТЦ "Плазма"</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Кульпарківська, 226а, ТРЦ Вікторія Гарденс</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Кульпарківська, 226а, ТРЦ Вікторія Гарденс</p>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-6">
 						<div class="contacts-item">
 							<img src="/img/contacts_ico.svg" alt="optika" class="contacts-item__ico">
-							<p class="contacts-item__addr">Вул. Мазепи, 1б, СТРЦ Спартак</p>
+							<p class="contacts-item__addr">м.Львів<br>Вул. Мазепи, 1б, СТРЦ Спартак</p>
 						</div>
 					</div>
 				</div>
@@ -525,6 +525,10 @@
 	</div>
 
 	<div class="d-none">
+		<div id="thn" class="thn">
+			<h3>Заявка відправлена!</h3>
+			<p>З Вами зв'яжуться найближчим часом.</p>
+		</div>
 		<div id="buy" class="buy">
 			<div class="buy__half">
 				<h3 class="buy__ttl">Bausch & Lomb Renu Multiplus</h3>
@@ -539,7 +543,7 @@
 					<div class="rline last">
 						<input type="text" name="postal" class="rfield modal-form__input" placeholder="Місто та відділення НП:">
 					</div>
-					<button type="submit" class="btnsubmit modal-form__btn">Відправити накладеним платежем</button>
+					<button type="submit" class="btnsubmit modal-form__btn">Відправити</button>
 				</form>
 			</div>
 			<div class="buy__half d-none d-sm-block">
@@ -551,7 +555,7 @@
 	</div>
 
 	<link rel="stylesheet" href="/css/main.min.css">
-	<script src="/js/scripts.min.js"></script>
+	<script src="/js/scripts-ukr.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcKXBKsIMkew7SppGI1p-MKSBteq60bBY"></script>
 	<script>
 		google.maps.event.addDomListener(window, 'load', init);
