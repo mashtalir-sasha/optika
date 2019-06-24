@@ -59,7 +59,7 @@ gulp.task('js-ukr', function() {
 
 gulp.task('watch', ['sass', 'js', 'js-ukr', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js', 'js-ukr']);
 	gulp.watch('app/*.html', browsersync.reload);
 	gulp.watch('app/*.php', browsersync.reload);
 });

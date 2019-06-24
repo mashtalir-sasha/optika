@@ -224,13 +224,25 @@ $(function() {
 		$('.priceCart').html(price);
 	});
 
-	/*$(document).on('change',function() {
+	// Общая сума заказа
+	$('.totalSum').html($('.priceCart').html());
+	$('input[name=summa]').val($('.priceCart').html()+' грн.');
+	$('.next').click(function() {
 		var totalSum = 0;
 		$('.price').each(function() {
 			totalSum += parseInt( $(this).html() );
-			console.log(totalSum)
+			$('.totalSum').html(totalSum);
+			$('input[name=summa]').val(totalSum+' грн.');
 		});
-	});*/
+	});
+	$('body').on('change',function() {
+		var totalSum = 0;
+		$('.price').each(function() {
+			totalSum += parseInt( $(this).html() );
+			$('.totalSum').html(totalSum);
+			$('input[name=summa]').val(totalSum+' грн.');
+		});
+	});
 
 	$(".scroll").each(function () {
 		var block = $(this);

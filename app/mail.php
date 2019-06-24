@@ -23,11 +23,13 @@
 	if(isset ($_POST['lens'])) {$lens=$_POST['lens'];}
 	if(isset ($_POST['volume'])) {$volume=$_POST['volume'];}
 
+	if(isset ($_POST['summa'])) {$summa=$_POST['summa'];}
+
 
 	$to = "crm@elit-optika.com.ua"; // Замениь на емаил клиента
 
 	$message = "Форма: $title <br><br>";
-	if ( $name || $phonenum || $pack || $type || $radius || $rightforce || $rightquantity || $leftforce || $leftquantity || $solution || $postal || $lens || $volume ) {
+	if ( $name || $phonenum || $pack || $type || $radius || $rightforce || $rightquantity || $leftforce || $leftquantity || $solution || $postal || $lens || $volume || $summa ) {
 		$message .= ""
 			. ( $name ?" Имя:  $name <br>" : "")
 			. ( $phonenum ?" Телефон:  $phonenum <br>" : "")
@@ -41,7 +43,8 @@
 			. ( $solution ?" Раствор:  $solution <br>" : "")
 			. ( $postal ?" Новая Почта:  $postal <br>" : "")
 			. ( $lens ?" Линзы:  $lens <br>" : "")
-			. ( $volume ?" Обьем:  $volume <br>" : "");
+			. ( $volume ?" Обьем:  $volume <br>" : "")
+			. ( $summa ?" Сумма заказа:  $summa <br>" : "");
 	}
 
 	$headers = "MIME-Version: 1.0\r\n";
